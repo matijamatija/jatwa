@@ -1,0 +1,21 @@
+<% provide(:title, "Sign in") %>
+<h1>Sign in</h1>
+<div class="row">
+	<div class="span6 offset3">
+	<!--OBRISATI -->
+		<div id="error_explanation">
+			<div class="alert alert-error">Under construction!!!</div>
+		</div>
+	<!--OBRISATI end-->
+		<%= form_for(:session, url: sessions_path) do |f| %>
+			<%= f.label :emal %>
+			<%= f.text_field :email %>
+
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+
+			<%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+		<% end %>
+		<p>New user? <%= link_to "Sign up now!", signup_path %>
+	</div>
+</div>
